@@ -1,0 +1,143 @@
+.navegator{
+	background-color: black;
+}
+
+#logo-AP{
+	width: 100%;
+	height: auto;
+}
+
+#login{
+	border: 1px;
+	background-color: rgba(0,0,0,0);
+	color: #fff;
+	justify-content: center;
+}
+
+#titulo{
+	color: #fff;
+	font-size: 1em;
+	margin-top: 2%;
+}
+
+#banner{
+	width: 100%;
+	height: auto;
+	border: solid;
+	border-width: 1px;
+	margin-top: 1em;
+}
+
+#profile-pick{
+	width: 100%;
+    height: auto;
+ }
+
+#padre-banner{
+	position: relative;
+	margin-bottom:12%;
+}
+#padre-profile{
+	position: absolute;
+    top:60%;
+    left: 6%;
+    border: 0.5em solid #fff;
+    width: 20%;
+    border-radius: 50%;
+}
+
+@media(max-width: 576px){
+	#logo-AP{
+		width: 10%;
+		height: auto;
+	}
+	#padre-profile{
+		width: 50%;
+		height: auto;
+		left: 25%;
+		right: 25%;
+		top: 25%;
+        border: 5px solid #fff;
+	}
+	#padre-banner{
+		margin-bottom: 30%;
+	}
+}
+
+#section1{
+	text-align: center;
+}
+
+
+/*banner-con imagen como fondo
+#banner{
+	background-image: url(AdobeStock_167281093.jpeg);
+}*/
+
+
+.container {
+                        position: relative;
+                    }
+
+                    .container__percentages {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+
+                        /* Rounded border */
+                        border: 12px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 9999px;
+
+                        /* Size */
+                        height: 128px;
+                        width: 128px;
+                    }
+
+                    .container__curve {
+                        /* Position */
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
+
+                        /* If percentages is less than 50 */
+                        clip: rect(0px, 128px, 128px, 64px);
+
+                        /* If percentages is greater than or equals to 50 */
+                        clip: rect(auto, auto, auto, auto);
+                    }
+
+                    .container__half {
+                        /* Take full size */
+                        height: 100%;
+                        position: absolute;
+                        width: 100%;
+
+                        /*
+    Background color of curve.
+    The border width should be the same as the area showing the percentages
+    */
+                        border: 12px solid rgb(0, 68, 158);
+                        border-radius: 9999px;
+                    }
+
+                    .container__half--first {
+                        /* Position */
+                        clip: rect(0px, 64px, 128px, 0px);
+                        transform: rotate(162deg); /* Number of percentages * 360 / 100 */
+                    }
+
+                    .container__half--second {
+                        /* Position */
+                        clip: rect(0px, 64px, 128px, 0px);
+
+                        /* If percentages is less than 50 */
+                        transform: rotate(0deg);
+
+                        /* If percentages is greater than or equals to 50 */
+                        transform: rotate(180deg);
+                    }
